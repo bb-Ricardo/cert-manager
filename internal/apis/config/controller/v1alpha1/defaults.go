@@ -258,7 +258,7 @@ func SetDefaults_ControllerConfiguration(obj *v1alpha1.ControllerConfiguration) 
 		obj.PprofAddress = defaultProfilerAddr
 	}
 
-	if obj.ChallengeAuthorizationTimeout.IsZero() {
+	if obj.ChallengeAuthorizationTimeout == nil || obj.ChallengeAuthorizationTimeout.IsZero() {
 		obj.ChallengeAuthorizationTimeout = sharedv1alpha1.DurationFromTime(defaultChallengeAuthorizationTimeout)
 	}
 
