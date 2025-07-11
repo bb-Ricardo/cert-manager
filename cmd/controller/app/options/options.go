@@ -230,7 +230,7 @@ func AddConfigFlags(fs *pflag.FlagSet, c *config.ControllerConfiguration) {
 
 	fs.DurationVar(&c.ChallengeAuthorizationTimeout, "challenge-authorization-timeout", c.ChallengeAuthorizationTimeout, ""+
 		"Defines the timeout a challenge authorization can take before the request will be "+
-		"canceled. Defaults to 2 minutes")
+		"canceled.")
 
 	logf.AddFlags(&c.Logging, fs)
 }
